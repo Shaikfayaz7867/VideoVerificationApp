@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "VideoVerificationApp",
+    "slug": "VideoVerificationApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app requires access to the camera for video verification.",
+        "NSMicrophoneUsageDescription": "This app requires access to the microphone to record videos.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to save recorded videos."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "VideoVerificationApp needs access to your Camera for employee verification",
+          "microphonePermissionText": "VideoVerificationApp needs access to your Microphone for video recording"
+        }
+      ]
+    ]
+  }
+}
